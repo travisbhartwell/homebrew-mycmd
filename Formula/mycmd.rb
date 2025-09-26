@@ -17,9 +17,17 @@ class Mycmd < Formula
 
   def install
     bin.install "bin/mycmd"
-    inreplace bin/"mycmd", "#!/usr/bin/env bash", "#!/usr/bin/env MYCMD_SYSTEM_PATH=\"#{prefix}/mycmd\" MYCMD_VENDOR_PATH=\"#{prefix}/vendor\" #{HOMEBREW_PREFIX}/bin/bash"
-    inreplace bin/"mycmd", '    _MYCMD_LAUNCHER_SELF_FILE="${BASH_SOURCE[0]}"', "    _MYCMD_LAUNCHER_SELF_FILE=\"#{bin}/mycmd\""
-    inreplace bin/"mycmd", 'MYCMD_BIN_DIR=$(cd "$(dirname "${_MYCMD_LAUNCHER_SELF_FILE}")" &>/dev/null && pwd -P)', "MYCMD_BIN_DIR=#{bin}"
+    inreplace bin/"mycmd",
+      "#!/usr/bin/env bash",
+      "#!/usr/bin/env MYCMD_SYSTEM_PATH=\"#{prefix}/mycmd\" " \
+      "MYCMD_VENDOR_PATH=\"#{prefix}/vendor\" " \
+      "#{HOMEBREW_PREFIX}/bin/bash"
+    inreplace bin/"mycmd",
+      '_MYCMD_LAUNCHER_SELF_FILE="${BASH_SOURCE[0]}"',
+      "_MYCMD_LAUNCHER_SELF_FILE=\"#{bin}/mycmd\""
+    inreplace bin/"mycmd",
+      'MYCMD_BIN_DIR=$(cd "$(dirname "${_MYCMD_LAUNCHER_SELF_FILE}")" &>/dev/null && pwd -P)',
+      "MYCMD_BIN_DIR=#{bin}"
 
     prefix.install "vendor"
     prefix.install "mycmd"

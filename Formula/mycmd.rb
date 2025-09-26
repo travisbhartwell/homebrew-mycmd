@@ -5,10 +5,11 @@ class Mycmd < Formula
   sha256 "c32249a83d9de65ce405073ac0934ef1fa4349f5f7bba6c1f08bbeeb099e0f9a"
   license "MIT"
 
+  depends_on "fzf"
+
   on_macos do
     depends_on "bash"
     depends_on "coreutils"
-    depends_on "fzf"
 
     depends_on "findutils" => :optional
     depends_on "gnu-sed" => :optional

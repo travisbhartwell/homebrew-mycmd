@@ -10,8 +10,8 @@ class Myproject < Formula
 
   on_macos do
     depends_on "coreutils"
-    depends_on "grep"
     depends_on "findutils"
+    depends_on "grep"
   end
 
   def install

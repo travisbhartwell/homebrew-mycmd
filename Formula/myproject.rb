@@ -2,7 +2,7 @@ class Myproject < Formula
   desc "Project Task Runner using MyCmd"
   homepage "https://github.com/travisbhartwell/myproject"
   url "https://github.com/travisbhartwell/myproject/releases/download/v0.03/myproject-0.03.tar.gz"
-  sha256 "2e72d00de6ce94a83482405dbb912d169821c33165fe12b0185855a2e88d8cfa"
+  sha256 "9dd95b6efae42fd93f88bd328838547c38331444be4add23330931566e43b98e"
   license "MIT"
 
   depends_on "git"

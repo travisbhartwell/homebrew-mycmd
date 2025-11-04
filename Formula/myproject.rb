@@ -1,7 +1,7 @@
 class Myproject < Formula
   desc "Project Task Runner using MyCmd"
   homepage "https://github.com/travisbhartwell/myproject"
-  url "https://github.com/travisbhartwell/myproject/releases/download/v0.02/myproject-0.02.tar.gz"
+  url "https://github.com/travisbhartwell/myproject/releases/download/v0.03/myproject-0.03.tar.gz"
   sha256 "2e72d00de6ce94a83482405dbb912d169821c33165fe12b0185855a2e88d8cfa"
   license "MIT"
 
